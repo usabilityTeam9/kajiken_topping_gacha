@@ -1,13 +1,11 @@
 import "./App.css";
-import Button from "@mui/material/Button";
+import Header from "./components/Header";
 
 function App() {
   return (
     <div className="App">
       <>
-        <Button variant="text">Text</Button>
-        <Button variant="contained">Contained</Button>
-        <Button variant="outlined">Outlined</Button>
+        <Header />
       </>
     </div>
   );
