@@ -24,13 +24,13 @@ export default function ButtonLogic() {
   const [toppinglist250, setTopping250] = useState(["チャーシュー"]);
   function Randompick(level) {
     let toppings = [];
-    if (level === 4) {
+    if (level === 3) {
       toppings = [toppinglist20, toppinglist50, toppinglist100, toppinglist250];
-    } else if (level === 3) {
-      toppings = [toppinglist20, toppinglist50, toppinglist100];
     } else if (level === 2) {
-      toppings = [toppinglist20, toppinglist50];
+      toppings = [toppinglist20, toppinglist50, toppinglist100];
     } else if (level === 1) {
+      toppings = [toppinglist20, toppinglist50];
+    } else if (level === 0) {
       toppings = [toppinglist20];
     }
     const random = Math.floor(Math.random() * toppings.length);
@@ -42,7 +42,8 @@ export default function ButtonLogic() {
   }
   function handleClick() {
     console.log("クリックされました");
-    console.log(Randompick(1));
+    let random = Math.floor(Math.random() * 4);
+    console.log(random);
   }
 
   return (
