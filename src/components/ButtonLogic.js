@@ -2,6 +2,7 @@ import React, { useState } from "react";
 export default function ButtonLogic() {
   const [count, setCount] = useState(0);
   const [possession_money, setPossession_money] = useState(500);
+  const [possession_stock, setPossession_stock] = useState([]);
   const [toppinglist20, setTopping20] = useState(["マヨネーズ", "魚粉"]);
   const [toppinglist50, setTopping50] = useState([
     "青ネギ",
@@ -21,35 +22,34 @@ export default function ButtonLogic() {
     "カレー",
   ]);
   const [toppinglist250, setTopping250] = useState(["チャーシュー"]);
-  function Randompick() {
-    const toppings = [
-      toppinglist20,
-      toppinglist50,
-      toppinglist100,
-      toppinglist250,
-    ];
-    const topping_num = Math.floor(Math.random() * toppings.length);
-    const topping_num2 = Math.floor(
-      Math.random() * toppings[topping_num].length
-    );
-    const topping = toppings[topping_num][topping_num2];
-    return topping;
+  function Randompick(level) {
+    let toppings = [];
+    if (level === 4) {
+      toppings = [toppinglist20, toppinglist50, toppinglist100, toppinglist250];
+    } else if (level === 3) {
+      toppings = [toppinglist20, toppinglist50, toppinglist100];
+    } else if (level === 2) {
+      toppings = [toppinglist20, toppinglist50];
+    } else if (level === 1) {
+      toppings = [toppinglist20];
+    }
+    const random = Math.floor(Math.random() * toppings.length);
+    return Listpick(toppings[random]);
+  }
+  function Listpick(list) {
+    const random = Math.floor(Math.random() * list.length);
+    return list[random];
   }
   function handleClick() {
-    while (possession_money >= 20) {
-      setCount(count + 1);
-      setPossession_money(possession_money - 20);
-      setTopping20([...toppinglist20, "青ネギ"]);
-    }
+    console.log("クリックされました");
+    console.log(Randompick(1));
   }
 
   return (
     <div>
       <button
         onClick={() => {
-          console.log("Button clicked");
-          setCount(count + 1);
-          console.log(count);
+          handleClick();
         }}
       >
         Click me
@@ -58,6 +58,8 @@ export default function ButtonLogic() {
       <p>{toppinglist50}</p>
       <p>{toppinglist100}</p>
       <p>{toppinglist250}</p>
+      <p>{possession_money}</p>
+      <p>{possession_stock}</p>
     </div>
   );
 }
