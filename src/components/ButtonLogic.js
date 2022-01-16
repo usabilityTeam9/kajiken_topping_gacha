@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 export default function ButtonLogic() {
-  const [count, setCount] = useState(0);
+  const [count, setCount] = useState(-1);
   const [possession_money, setPossession_money] = useState(500);
   const [possession_stock, setPossession_stock] = useState([]);
   const [toppinglist20, setTopping20] = useState(["マヨネーズ", "魚粉"]);
@@ -33,17 +33,17 @@ export default function ButtonLogic() {
     } else if (level === 0) {
       toppings = [toppinglist20];
     }
-    const random = Math.floor(Math.random() * toppings.length);
-    return Listpick(toppings[random]);
+    return Listpick(toppings[Math.floor(Math.random() * toppings.length)]);
   }
   function Listpick(list) {
     const random = Math.floor(Math.random() * list.length);
+    setCount(random);
     return list[random];
   }
   function handleClick() {
     console.log("クリックされました");
-    let random = Math.floor(Math.random() * 4);
-    console.log(random);
+
+    Randompick(Math.floor(Math.random() * 4));
   }
 
   return (
