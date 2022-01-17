@@ -1,3 +1,26 @@
+# Kajiken_topping_gacha
+
+## 概要
+
+[油そば専門店の歌志軒](https://www.kajiken.biz/)で提供されるトッピングをガチャし、表示されたトッピングを注文することによって、その時の唯一無二の油そばを楽しむことができるwebアプリケーションです。
+
+## 開発方法
+
+このプロジェクトにはNode.jsを利用します。
+下記はオススメのNode.jsバージョン管理システムです。
+
+https://docs.volta.sh/
+
+https://github.com/hokaccha/nodebrew
+
+なお、node.jsの依存関係はpackage-lock.jsonでロックされています。
+
+`git clone git@github.com:usabilityTeam9/kajiken_topping_gacha.git`
+`cd kajiken_topping_gacha`
+`npm install`
+`npm start`
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
