@@ -1,6 +1,6 @@
 import "./App.css";
 import Header from "./components/Header";
-import RandomTopping from "./components/RandomTopping";
+import RandomTopping from "./components/ListTopping";
 import ButtonLogic from "./components/ButtonLogic";
 function App() {
   return (
@@ -8,7 +8,6 @@ function App() {
       <>
         <Header />
         <ButtonLogic />
-        <RandomTopping />
       </>
     </div>
   );

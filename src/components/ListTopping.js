@@ -11,14 +11,6 @@ const Item = styled(Paper)(({ theme }) => ({
   color: theme.palette.text.secondary,
 }));
 
-export default function RandomTopping() {
-  return (
-    <div>
-      <Stack direction="column" spacing={2}>
-        <Item>Item 1</Item>
-        <Item>Item 2</Item>
-        <Item>Item 3</Item>
-      </Stack>
-    </div>
-  );
+export default function ListTopping(topping) {
+  return <></>;
 }
