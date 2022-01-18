@@ -5,16 +5,16 @@ export default function ButtonLogic() {
   // 選択されたトッピングの種類
   const [possession_stock, setPossession_stock] = useState([]);
   // トッピングリスト
-  const [toppinglist20, setTopping20] = useState(["マヨネーズ", "魚粉"]);
-  const [toppinglist50, setTopping50] = useState([
+  const toppinglist20 = ["マヨネーズ", "魚粉"];
+  const toppinglist50 = [
     "青ネギ",
     "キャベツ",
     "もやし",
     "白ネギ",
     "ノリ",
     "梅干し",
-  ]);
-  const [toppinglist100, setTopping100] = useState([
+  ];
+  const toppinglist100 = [
     "明太子",
     "半熟卵",
     "メンマ",
@@ -22,8 +22,8 @@ export default function ButtonLogic() {
     "チーズ",
     "トマト",
     "カレー",
-  ]);
-  const [toppinglist250, setTopping250] = useState(["チャーシュー"]);
+  ];
+  const toppinglist250 = ["チャーシュー"];
 
   function Listpick(list) {
     // リストを選択した時にランダムに選択される
