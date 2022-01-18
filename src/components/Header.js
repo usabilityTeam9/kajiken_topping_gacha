@@ -4,7 +4,6 @@ import Stack from "@mui/material/Stack";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import IconButton from "@mui/material/IconButton";
-import { ThemeProvider, createTheme } from "@mui/material/styles";
 import Button from "@mui/material/Button";
 
 function appBar(label) {
@@ -23,25 +22,14 @@ function appBar(label) {
   );
 }
 
-const darkTheme = createTheme({
-  palette: {
-    mode: "dark",
-    primary: {
-      main: "#1976d2",
-    },
-  },
-});
-
 function Header() {
   return (
     <>
       <Stack spacing={1} sx={{ flexGrow: 1 }}>
-        <ThemeProvider theme={darkTheme}>
-          <AppBar position="relative" color="primary">
-            {appBar("Kajiken_topping_gacha")}
-          </AppBar>
-          <Button></Button>
-        </ThemeProvider>
+        <AppBar position="relative" color="primary">
+          {appBar("Kajiken_topping_gacha")}
+        </AppBar>
+        <Button></Button>
       </Stack>
     </>
   );
