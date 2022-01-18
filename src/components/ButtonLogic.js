@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import ListTopping from "./ListTopping";
 export default function ButtonLogic() {
   // 所持金
   const [possession_money, setPossession_money] = useState(0);
@@ -94,12 +95,10 @@ export default function ButtonLogic() {
       >
         Click me
       </button>
-      <p>{toppinglist20}</p>
-      <p>{toppinglist50}</p>
-      <p>{toppinglist100}</p>
-      <p>{toppinglist250}</p>
-      <p>{possession_money}</p>
-      <p>{possession_stock}</p>
+      {possession_stock.map((topping) => (
+        <p>{topping}</p>
+      ))}
+      <ListTopping list={possession_stock} />
     </div>
   );
 }

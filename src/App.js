@@ -1,7 +1,7 @@
 import "./App.css";
 import AppBar from "@mui/material/AppBar";
 import Header from "./components/Header";
-import RandomTopping from "./components/RandomTopping";
+import RandomTopping from "./components/ListTopping";
 import Footer from "./components/Footer";
 import ButtonLogic from "./components/ButtonLogic";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
@@ -23,7 +23,6 @@ function App() {
           <Header />
         </ThemeProvider>
           <ButtonLogic />
-          <RandomTopping />
           <Footer />
       </>
     </div>
