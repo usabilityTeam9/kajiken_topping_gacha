@@ -11,6 +11,6 @@ const Item = styled(Paper)(({ theme }) => ({
   color: theme.palette.text.secondary,
 }));
 
-export default function ListTopping(topping) {
-  return <></>;
+export default function ListTopping(props) {
+  return <>{props.topping}</>;
 }

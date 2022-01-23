@@ -96,9 +96,8 @@ export default function ButtonLogic() {
         Click me
       </button>
       {possession_stock.map((topping) => (
-        <p>{topping}</p>
+        <ListTopping topping={topping} />
       ))}
-      <ListTopping list={possession_stock} />
     </div>
   );
 }
