@@ -87,7 +87,7 @@ export default function ButtonLogic() {
   }
 
   return (
-    <div>
+    <>
       <button
         onClick={() => {
           handleClick(500);
@@ -98,6 +98,6 @@ export default function ButtonLogic() {
       {possession_stock.map((topping) => (
         <ListTopping topping={topping} />
       ))}
-    </div>
+    </>
   );
 }
