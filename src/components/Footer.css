@@ -1,32 +1,34 @@
-h1{
+h1 {
     color: red;
 }
-footer{
+
+footer {
     background: #949087;
     text-align: center;
     padding: 3rem;
+    margin-top: 80%;
 }
 
-footer ul{
+footer ul {
     display: flex;
     justify-content: center;
     margin-bottom: 2rem;
 }
 
-footer li{
+footer li {
     margin: 0 12px;
     list-style: none;
 }
 
-footer a{
+footer a {
     color: #fff;
 }
 
-footer a:hover{
+footer a:hover {
     color: #c7c3ba;
 }
 
-footer small{
+footer small {
     color: #c7c3ba;
     font-size: .875rem;
 }

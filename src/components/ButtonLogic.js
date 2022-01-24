@@ -101,12 +101,11 @@ export default function ButtonLogic() {
           Contained
         </Button>
       </div>
-      <div className="list_wa">
-        <p>所持金: {possession_money}</p>
+      <div className="component_wrapper">
+        {possession_stock.map((topping) => (
+          <ListTopping topping={topping} />
+        ))}
       </div>
-      {possession_stock.map((topping) => (
-        <ListTopping topping={topping} />
-      ))}
     </>
   );
 }
