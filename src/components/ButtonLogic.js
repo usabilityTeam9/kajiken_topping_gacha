@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import ListTopping from "./ListTopping";
-import Stack from "@mui/material/Stack";
+import ButtonLogic_css from "./ButtonLogic.css";
 import Button from "@mui/material/Button";
 export default function ButtonLogic() {
   // 所持金
@@ -90,15 +90,20 @@ export default function ButtonLogic() {
 
   return (
     <>
-      <Button
-        variant="contained"
-        onClick={() => {
-          handleClick(500);
-        }}
-      >
-        Contained
-      </Button>
-
+      <div className="button_wrapper">
+        <Button
+          className="button_wrapper"
+          variant="contained"
+          onClick={() => {
+            handleClick(500);
+          }}
+        >
+          Contained
+        </Button>
+      </div>
+      <div className="list_wa">
+        <p>所持金: {possession_money}</p>
+      </div>
       {possession_stock.map((topping) => (
         <ListTopping topping={topping} />
       ))}
