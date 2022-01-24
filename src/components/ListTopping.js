@@ -1,16 +1,16 @@
 import * as React from "react";
-import Paper from "@mui/material/Paper";
-import Stack from "@mui/material/Stack";
+import Box from "@mui/material/Box";
+import Card from "@mui/material/Card";
+import CardContent from "@mui/material/CardContent";
 
-import { styled } from "@mui/material/styles";
-
-const Item = styled(Paper)(({ theme }) => ({
-  ...theme.typography.body2,
-  padding: theme.spacing(4),
-  textAlign: "center",
-  color: theme.palette.text.secondary,
-}));
-
-export default function ListTopping(topping) {
-  return <></>;
+export default function ListTopping(props) {
+  return (
+    <>
+      <Card sx={({ display: "flex" }, { minWidth: 275 })}>
+        <Box sx={{ display: "flex", flexDirection: "column" }}>
+          <CardContent sx={{ flex: "1 0 auto" }}>{props.topping}</CardContent>
+        </Box>
+      </Card>
+    </>
+  );
 }

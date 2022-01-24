@@ -1,0 +1,10 @@
+.button_wrapper {
+    text-align: center;
+}
+
+.component_wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

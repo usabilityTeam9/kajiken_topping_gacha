@@ -22,8 +22,8 @@ function App() {
         <ThemeProvider theme={darkTheme}>
           <Header />
         </ThemeProvider>
-          <ButtonLogic />
-          <Footer />
+        <ButtonLogic />
+        <Footer />
       </>
     </div>
   );
