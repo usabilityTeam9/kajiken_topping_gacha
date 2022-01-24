@@ -90,6 +90,11 @@ export default function ButtonLogic() {
 
   return (
     <>
+      <div className="component_wrapper">
+        {possession_stock.map((topping) => (
+          <ListTopping topping={topping} />
+        ))}
+      </div>
       <div className="button_wrapper">
         <Button
           className="button_wrapper"
@@ -100,11 +105,6 @@ export default function ButtonLogic() {
         >
           Contained
         </Button>
-      </div>
-      <div className="component_wrapper">
-        {possession_stock.map((topping) => (
-          <ListTopping topping={topping} />
-        ))}
       </div>
     </>
   );

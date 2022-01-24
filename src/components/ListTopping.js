@@ -1,13 +1,16 @@
 import * as React from "react";
-import ButtonLogic_css from "./ButtonLogic.css";
-import Stack from "@mui/material/Stack";
-import SnackbarContent from "@mui/material/SnackbarContent";
+import Box from "@mui/material/Box";
+import Card from "@mui/material/Card";
+import CardContent from "@mui/material/CardContent";
+
 export default function ListTopping(props) {
   return (
     <>
-      <Stack direction="row" spacing={2}>
-        <SnackbarContent message={props.topping} />
-      </Stack>
+      <Card sx={({ display: "flex" }, { minWidth: 275 })}>
+        <Box sx={{ display: "flex", flexDirection: "column" }}>
+          <CardContent sx={{ flex: "1 0 auto" }}>{props.topping}</CardContent>
+        </Box>
+      </Card>
     </>
   );
 }
