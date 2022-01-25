@@ -95,10 +95,10 @@ export default function ButtonLogic() {
           className="button_wrapper"
           variant="contained"
           onClick={() => {
-            handleClick(500);
+            handleClick(300);
           }}
         >
-          ガチャる！
+          300円でガチャる！
         </Button>
       </div>
       <div className="component_wrapper">
