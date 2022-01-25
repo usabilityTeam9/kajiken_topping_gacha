@@ -1,5 +1,5 @@
 import * as React from "react";
-import Box from "@mui/material/Box";
+import Stack from "@mui/material/Stack";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 
@@ -39,11 +39,16 @@ export default function ListTopping(props) {
   };
   return (
     <>
-      <Card sx={({ display: "flex" }, { minWidth: 275 })}>
-        <Box sx={{ display: "flex", flexDirection: "column" }}>
-          <img src={ToppingImage[props.topping]} alt="cha" />
-          <CardContent sx={{ flex: "1 0 auto" }}>{props.topping}</CardContent>
-        </Box>
+      <Card sx={({ display: "flex" }, { minWidth: 275, minHeight: 70 })}>
+        <Stack direction="row" spacing={2}>
+          <img
+            src={ToppingImage[props.topping]}
+            width="70"
+            height="70"
+            alt="cha"
+          />
+          <CardContent>{props.topping}</CardContent>
+        </Stack>
       </Card>
     </>
   );
